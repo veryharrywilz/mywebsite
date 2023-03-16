@@ -23,8 +23,10 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>Harrison Wilson</h1>
-          <NavBar user={user}/>
+          <h1 className="topLeftName">Harrison</h1>
+          <h1 className="topLeftName">Wilson</h1>
+          <br/>
+          <NavBar user={user} />
           <Routes>
             <Route exact path="/" element={<HomePage />}></Route>
             <Route exact path="/about" element={<About />}></Route>

@@ -7,33 +7,33 @@ function NavBar({ user }) {
 
 
     return (
-        <div>
+        <div className="navBar">
             <NavLink to="/">
-                <button>Home</button>
+                <button className="navBarButton">Home</button>
             </NavLink>
 
             <NavLink to="/about">
-                <button>About</button>
+                <button className="navBarButton">About</button>
             </NavLink>
 
             <NavLink to="/contact">
-                <button>Contact</button>
+                <button className="navBarButton">Contact</button>
             </NavLink>
 
             <NavLink to="/blog">
-                <button>Blog</button>
+                <button className="navBarButton">Blog</button>
             </NavLink>
 
             <NavLink to="/projects">
-                <button>Projects</button>
+                <button className="navBarButton">Projects</button>
             </NavLink>
             {user === null ?
                 <NavLink to="/account">
-                    <button>Login</button>
+                    <button className="navBarButton">Login</button>
                 </NavLink>
                 :
                 <NavLink to="/account">
-                    <button>Profile</button>
+                    <button className="navBarButton">Profile</button>
                 </NavLink>
             }
         </div>
