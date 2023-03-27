@@ -7,6 +7,7 @@ import About from './About';
 import Blog from './Blog/Blog';
 import CreateAccount from './Profile/Account';
 import ContactPage from './Contact/ContactPage';
+import Projects from './Projects/Projects';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -23,16 +24,19 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1 className="topLeftName">Harrison</h1>
-          <h1 className="topLeftName">Wilson</h1>
+          <div className="topLeftName">          
+            <h1>Harrison</h1>
+            <h1>Wilson</h1>
+          </div>
           <br/>
           <NavBar user={user} />
           <Routes>
             <Route exact path="/" element={<HomePage />}></Route>
             <Route exact path="/about" element={<About />}></Route>
-            <Route exact path="/blog" element={<Blog />}></Route>
+            <Route exact path="/blog" element={<Blog user={user}/>}></Route>
             <Route exact path="/account" element={<CreateAccount user={user} setUser={setUser} />}></Route>
             <Route exact path="/contact" element={<ContactPage user={user} />}></Route>
+            <Route exact path="/projects" element={<Projects user={user} />}></Route>
           </Routes>
         </header>
       </div>

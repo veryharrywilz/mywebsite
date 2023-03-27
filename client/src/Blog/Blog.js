@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import PostBlog from "./PostBlog";
 
-function Blog() {
+function Blog({user}) {
     const [blogData, setBlogData] = useState([])
+    const [checkUser, setCheckUser] = useState(false)
 
 
     useEffect(() => {
@@ -12,6 +13,9 @@ function Blog() {
             .then(data => {
                 setBlogData(data)
             })
+            if(user !== {} && user.username === "VeryHarryWilz"){
+                setCheckUser(true)
+            }
     }, [])
 
     const blogElements = blogData.map((post) => {
@@ -25,7 +29,8 @@ function Blog() {
     return (
         <>
             <h1>Blog</h1>
-            <PostBlog />
+            {checkUser ?
+            <PostBlog /> : null}
             {blogElements}
         </>
     )
