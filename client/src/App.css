@@ -1,5 +1,9 @@
-.App{
 
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.App{
+    font-family: 'Muli', sans-serif;
 }
 
 .blogImage {
@@ -15,33 +19,79 @@
     border-radius: 10px;
 }
 
-.topLeftName{
-    color: rgb(207, 151, 48);
+.topLeftName {
+    color: rgb(234, 163, 31);
     padding-bottom: 0px;
     padding-top: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    border-style: dashed;
+    border-color: black;
+    border-radius: 35px;
+    width: 150px;
+
 }
 
-.navBar{
-    background-color: rgb(207, 151, 48);
+.topLeftName h1 {
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.navBar {
+    background-color: rgb(234, 163, 31);
     margin-left: auto;
     margin-right: auto;
     width: 500px;
     height: 45px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: black;
 }
 
-.navBarButton{
+.navBarButton {
     width: 16.666%;
-    margin-top:10px;
+    margin-top: 10px;
+}
+
+.profPic {
+    height: 200px;
+    border-style: solid;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+
+.headline {
+    text-align: center;
+}
+
+.contactForm {
+    text-align: center;
+}
+
+.contactForm input {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.contactForm textarea {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 200px;
 }
 
 
+.homeText {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-
-
-
-
-
-
-
+.aboutPara {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    /* color: rgb(85, 85, 85); */
+}

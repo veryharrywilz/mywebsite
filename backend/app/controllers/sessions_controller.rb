@@ -5,10 +5,11 @@ class SessionsController < ApplicationController
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             session[:username] = user.username
+            render json: user, status: :ok
         else
             render json: "Error"
+            return user
         end
-        render json: user, status: :ok
     end
 
     def destroy

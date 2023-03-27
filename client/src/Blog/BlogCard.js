@@ -7,6 +7,7 @@ function BlogCard({post}) {
             <p>{post.created_at}</p>
             <p>{post.content}</p>
             <img className="blogImage" src={post.image}/>
+            <p>Category: {post.category}</p>
         </div>
     )
 }

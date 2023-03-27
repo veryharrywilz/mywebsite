@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects, only: [:index]
   resources :users, only: [:show, :create]
   resources :blogs, only: [:index, :create]
   resources :sessions, only: [:create, :destroy] 
