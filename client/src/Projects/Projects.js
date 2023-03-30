@@ -20,7 +20,7 @@ function Projects(){
 
     return(
         <>
-            {projectElements}
+            {projectElements.reverse()}
         </>
     )
 }

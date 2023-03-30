@@ -2,9 +2,13 @@ require 'bcrypt'
 
 class User < ApplicationRecord
     has_secure_password
-    validates :username, uniqueness: true
-    validates :email, uniqueness: true 
-
     include BCrypt
+    validates :username, presence: true
+    validates :username, uniqueness: true 
+    validates :username, length: { minimum: 5 }
+    validates :email, uniqueness: true 
+    validates :password, length: { in: 6..20 }
+
+    
 
 end

@@ -5,4 +5,9 @@ class ProjectsController < ApplicationController
        render json: projs, status: :ok 
     end
 
+    def latest_project
+        lastProj = Project.last 
+        render json: lastProj, status: :ok 
+    end
+
 end

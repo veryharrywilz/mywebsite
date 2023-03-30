@@ -25,8 +25,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div className="topLeftName">          
-            <h1>Harrison</h1>
-            <h1>Wilson</h1>
+            <h1>Harrison Wilson</h1>
           </div>
           <br/>
           <NavBar user={user} />
