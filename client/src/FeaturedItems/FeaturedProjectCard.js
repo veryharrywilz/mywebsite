@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import githubLogo from '../Photos/githubLogo.png'
 import YouTube from 'react-youtube';
 
-function ProjectCard({ project }) {
+function FeaturedProjectCard({ project }) {
     const [languages, setLanguages] = useState("")
     const url = project.link
 
@@ -18,7 +18,7 @@ function ProjectCard({ project }) {
 
 
     return (
-        <div className="projectCard">
+        <div className="featuredProjectCard">
             <h2>{project.title}</h2>
             <p><u>Language(s):</u> {languages}</p>
             <p><u>Description:</u> {project.description}</p>           
@@ -42,4 +42,4 @@ function ProjectCard({ project }) {
     )
 }
 
-export default ProjectCard;
+export default FeaturedProjectCard;

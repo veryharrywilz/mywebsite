@@ -16,10 +16,24 @@ class BlogsController < ApplicationController
         render json: newBlog, status: :created 
     end
 
+    def search
+        blogs = Blog.where(category: params[:search])
+        render json: blogs, status: :ok 
+    end
+
+    def latest_blog
+        lastBlog = Blog.last
+        render json: lastBlog, status: :ok 
+    end
+
     private
 
     def blog_params
         params.permit(:title, :content, :image)
+    end
+
+    def search_params
+        params.permit(:search)
     end
 
 
