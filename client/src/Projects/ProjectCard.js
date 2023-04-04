@@ -3,9 +3,10 @@ import ReactPlayer from 'react-player';
 import githubLogo from '../Photos/githubLogo.png'
 import YouTube from 'react-youtube';
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, classType }) {
     const [languages, setLanguages] = useState("")
     const url = project.link
+
 
 
     useEffect(() => {
@@ -17,8 +18,10 @@ function ProjectCard({ project }) {
     },[])
 
 
+
+
     return (
-        <div className="projectCard">
+        <div className={classType}>
             <h2>{project.title}</h2>
             <p><u>Language(s):</u> {languages}</p>
             <p><u>Description:</u> {project.description}</p>           

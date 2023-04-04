@@ -24,6 +24,7 @@ blog2 = Blog.create(content: "In the past 3-4 weeks, I've probably sent out well
 
 The hunt continues. Not going to pretend like it doesn't suck, because it does, but I know something is coming up soon! Staying optimistic.", title: "Job Application Woes", post_date: "Tue, 24 Feb 2023 13:00:00 -0500", image: "https://www.thebalancemoney.com/thmb/erUgdJyye75DsY5ZmqoZfp4kk88=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/employment-application-form-with-pen--document-is-mock-up-1128856629-5c65728146e0fb00017c2807.jpg", category: "Coding")
 
+blog3 = Blog.create(content: "This is a test blog. This is a test blog. This is a test blog. This is a test blog. This is a test blog. This is a test blog. This is a test blog. This is a test blog.", title: "Test blog ahoy", image: "https://res.infoq.com/articles/continuous-testing-best-practices/en/headerimage/unlocking-continuous-testing-logo-big-1564402385131.jpg", category: "Biking", post_date: "Fri, 31 Mar 2023 13:00:00 -0500")
 
 
 
@@ -35,3 +36,14 @@ proj3 = Project.create(title: "NYClean", link: "O1PEnloxPas", description: "A co
 proj4 = Project.create(title: "The Star Weebs Website", link: "c5gVqkKEU8Q", description: "This application is a website for my personal podcast “Star Weebs,” a pop culture podcast about Star Wars and Anime.", github: "https://github.com/veryharrywilz/StarWeebs", date_started: "Dec 2022", date_finished: "Jan 2022", language1: "React.js", language2: "Ruby on Rails")
 
 puts "seeding users"
+
+harry = User.create(username: "VeryHarryWilz", password: "Homey!996", email: "harriwilson5534@gmail.com")
+julia = User.create(username: "juliaterry414", password: "Milo2019", email: "juliaterry414@gmail.com")
+aj = User.create(username: "AyJayRan", password: "Tatsu919", email: "ayjay@gmail.com")
+puts "seeding comments"
+
+comment1 = Comment.create(user_id: harry.id, blog_id: blog1.id, content: "This is so true!", username: harry.username)
+comment2 = Comment.create(user_id: julia.id, blog_id: blog1.id, content: "Great post!", username: julia.username)
+comment3 = Comment.create(user_id: julia.id, blog_id: blog2.id, content: "I like this post", username: julia.username)
+comment4 = Comment.create(user_id: aj.id, blog_id: blog2.id, content: "Lol you nerd", username: aj.username)
+
