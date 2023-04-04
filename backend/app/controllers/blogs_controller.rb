@@ -8,7 +8,7 @@ class BlogsController < ApplicationController
     skip_before_action :verify_authenticity_token
     def index 
         blogs = Blog.all.sort {|a,b| b <=> a}
-        render json: blogs 
+        render json: blogs, include: [:comments], status: :ok 
     end
 
     def create

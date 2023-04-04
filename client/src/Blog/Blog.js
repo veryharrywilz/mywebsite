@@ -11,6 +11,7 @@ function Blog({ user }) {
         fetch("/blogs")
             .then(resp => resp.json())
             .then(data => {
+                console.log(data)
                 setBlogData(data)
             })
         if (user !== null) {

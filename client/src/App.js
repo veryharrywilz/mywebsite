@@ -8,6 +8,7 @@ import Blog from './Blog/Blog';
 import CreateAccount from './Profile/Account';
 import ContactPage from './Contact/ContactPage';
 import Projects from './Projects/Projects';
+import hwlogo from './Photos/HW.png'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -25,7 +26,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div className="topLeftName">          
-            <h1>Harrison Wilson</h1>
+            <img src={hwlogo} className="nameLogo" />
           </div>
           <br/>
           <NavBar user={user} />

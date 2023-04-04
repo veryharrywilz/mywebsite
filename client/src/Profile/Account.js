@@ -27,6 +27,7 @@ function Account({ user, setUser }) {
                 :
                 <>
                     <h1>{user.username}</h1>
+                    <p>Now that you are logged in, you have the ability to comment on blog posts!</p>
                     <button onClick={e => handleLogout(e)}>Logout</button>
                 </>
             }
